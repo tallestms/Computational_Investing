@@ -47,7 +47,7 @@ def simulate(startDate, endDate, symbolsEq, allocationEq) :
 
     return dailyReturnStdDev, avgDailyReturn, sharpeRatio, cumulativeReturn  
 
-optimalSharpeRatio = 0.1
+optimalSharpeRatio = 0.0
 optimalAllocation = [0, 0, 0, 0]
 for a in range (0, 10):
     for b in range (0, 10):
