@@ -46,17 +46,18 @@ def simulate(startDate, endDate, symbolsEq, allocationEq) :
 
     return dailyReturnStdDev, avgDailyReturn, sharpeRatio, cumulativeReturn  
 
-optimalSharpeRatio = 0.0
-optimalAllocation = [0, 0, 0, 0]
-for a in range (0, 10):
-    for b in range (0, 10):
-        for c in range (0, 10):
-            for d in range (0, 10):
-                if(a + b + c + d == 10):
-                    allocation = [float(a)/10, float(b)/10, float(c)/10, float(d)/10]
-                    volatility, dailyReturn, sharpeRatio, cumulativeReturn = simulate(dt_start, dt_end, ls_symbols, allocation) 
-                    if(sharpeRatio > optimalSharpeRatio):
-                        optimalSharpeRatio = sharpeRatio
-                        optimalAllocation = allocation
+if __name__ == '__main__':
+    optimalSharpeRatio = 0.0
+    optimalAllocation = [0, 0, 0, 0]
+    for a in range (0, 10):
+        for b in range (0, 10):
+            for c in range (0, 10):
+                for d in range (0, 10):
+                    if(a + b + c + d == 10):
+                        allocation = [float(a)/10, float(b)/10, float(c)/10, float(d)/10]
+                        volatility, dailyReturn, sharpeRatio, cumulativeReturn = simulate(dt_start, dt_end, ls_symbols, allocation) 
+                        if(sharpeRatio > optimalSharpeRatio):
+                            optimalSharpeRatio = sharpeRatio
+                            optimalAllocation = allocation
 
 

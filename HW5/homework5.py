@@ -1,5 +1,3 @@
-## Computational Investing I
-## HW 5
 
 import pandas as pd
 import pandas.stats.moments as pdsm
