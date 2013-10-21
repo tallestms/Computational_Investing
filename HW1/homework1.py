@@ -32,7 +32,6 @@ def simulate(startDate, endDate, symbolsEq, allocationEq) :
     
     na_normalizedPriceAllocation = na_normalized_price*allocationEq
     na_sumRows = na_normalizedPriceAllocation.sum(axis=1)
-    na_sumRows.shape = (na_sumRows.size(),1)
     dailyReturn = na_sumRows.copy()
     tsu.returnize0(dailyReturn)
     avgDailyReturn = np.average(dailyReturn)    
