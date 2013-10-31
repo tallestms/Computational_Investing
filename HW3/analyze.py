@@ -58,7 +58,7 @@ if __name__ == '__main__':
     sharpe = np.sqrt(NUM_TRADING_DAYS) * daily_ret / vol
     cum_ret = portVal[len(portVal) -1]/portVal[0]
     
-    print "Portifolio:"
+    print "Portfolio:"
     print "Sharpe Ratio: ", sharpe
     print "Volatility (stdev): ", vol
     print "Average Daily Return: ", daily_ret
